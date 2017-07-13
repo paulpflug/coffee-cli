@@ -1,0 +1,38 @@
+{
+  "name": "coffee-cli",
+  "description": "wrapper for coffee to support multiple coffee versions",
+  "version": "0.0.0",
+  "homepage": "https://github.com/paulpflug/",
+  "author": {
+    "name": "Paul Pflugradt",
+    "email": "paul.pflugradt@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/paulpflug/try-require-multiple"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "bin": {
+    "coffee-cli": "./coffee-cli.js"
+  },
+  "files": [
+    "*.js"
+  ],
+  "dependencies": {
+    "coffee-script": "^1.12.6",
+    "coffeescript": "^2.0.0-beta3"
+  },
+  "keywords": [
+    "coffee",
+    "cli"
+  ],
+  "readmeFilename": "README.md",
+  "scripts": {
+    "build": "coffee --no-header -b --compile --output ./ src/*.coffee",
+    "version": "npm run build && git add .",
+    "postversion": "git push && git push --tags && npm publish"
+  }
+}
