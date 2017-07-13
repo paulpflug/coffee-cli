@@ -1,7 +1,7 @@
 {
   "name": "coffee-cli",
   "description": "wrapper for coffee to support multiple coffee versions",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/paulpflug/",
   "author": {
     "name": "Paul Pflugradt",
@@ -31,8 +31,7 @@
   ],
   "readmeFilename": "README.md",
   "scripts": {
-    "build": "coffee --no-header -b --compile --output ./ src/*.coffee",
-    "version": "npm run build && git add .",
+    "version": "git add .",
     "postversion": "git push && git push --tags && npm publish"
   }
 }
